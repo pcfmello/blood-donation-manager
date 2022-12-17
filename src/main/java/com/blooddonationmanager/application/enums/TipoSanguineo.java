@@ -1,4 +1,4 @@
-package com.blooddonationmanager.enums;
+package com.blooddonationmanager.application.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
