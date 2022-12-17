@@ -9,6 +9,8 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -42,7 +44,8 @@ public class Pessoa implements Serializable {
     private LocalDate dataNascimento;
 
     @Column
-    private SexoEnum sexo;
+    @Enumerated(EnumType.STRING)
+    private String sexo;
 
     @Column(name = "nome_mae")
     private String nomeMae;
@@ -59,7 +62,7 @@ public class Pessoa implements Serializable {
     private Contato contato;
 
     @Column(name = "tipo_sanguineo")
-    // TODO Criar agregação com a classe Tipo Sangüíneo
-    private TipoSanguineo tipoSanguineo;
+    @Enumerated(EnumType.STRING)
+    private String tipoSanguineo;
 
 }
