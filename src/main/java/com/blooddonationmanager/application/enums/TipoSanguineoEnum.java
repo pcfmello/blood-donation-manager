@@ -5,7 +5,7 @@ import lombok.Getter;
 
 @AllArgsConstructor
 @Getter
-public enum TipoSanguineo {
+public enum TipoSanguineoEnum {
 
     A_POSITIVO("A+"),
     A_NEGATIVO("A-"),

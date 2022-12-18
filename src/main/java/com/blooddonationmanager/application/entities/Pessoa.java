@@ -3,8 +3,6 @@ package com.blooddonationmanager.application.entities;
 import java.io.Serializable;
 import java.time.LocalDate;
 
-import com.blooddonationmanager.application.enums.SexoEnum;
-import com.blooddonationmanager.application.enums.TipoSanguineo;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import jakarta.persistence.Column;
@@ -53,16 +51,10 @@ public class Pessoa implements Serializable {
     @Column(name = "nome_pai")
     private String nomePai;
 
-    @Column
-    // TODO Criar agregação com a classe Endereco
-    private Endereco endereco;
+    @Column(name = "altura")
+    private Float altura;
 
-    @Column
-    // TODO Criar agregação com a classe Contato
-    private Contato contato;
-
-    @Column(name = "tipo_sanguineo")
-    @Enumerated(EnumType.STRING)
-    private String tipoSanguineo;
+    @Column(name = "peso")
+    private Short peso;
 
 }

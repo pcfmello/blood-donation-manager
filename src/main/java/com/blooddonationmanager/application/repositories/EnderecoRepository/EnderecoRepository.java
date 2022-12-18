@@ -1,4 +1,4 @@
-package com.blooddonationmanager.application.repositories;
+package com.blooddonationmanager.application.repositories.EnderecoRepository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

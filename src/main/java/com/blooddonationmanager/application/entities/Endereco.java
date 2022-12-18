@@ -33,7 +33,7 @@ public class Endereco implements Serializable {
     private String logradouro;
 
     @Column
-    private String numero;
+    private Short numero;
 
     @Column
     private String bairro;
