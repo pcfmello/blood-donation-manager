@@ -1,5 +1,7 @@
 package com.blooddonationmanager.application.dtos;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,7 +16,10 @@ public class DoadorSangueDTO {
     private String nome;
     private String cpf;
     private String rg;
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
     private String data_nasc;
+
     private String sexo;
     private String mae;
     private String pai;
