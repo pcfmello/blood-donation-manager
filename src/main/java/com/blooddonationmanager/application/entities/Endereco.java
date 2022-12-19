@@ -19,7 +19,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-@Entity(name = "contato")
+@Entity(name = "endereco")
 public class Endereco implements Serializable {
     
     @Id

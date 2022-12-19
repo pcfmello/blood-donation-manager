@@ -1,5 +1,6 @@
 package com.blooddonationmanager.application.entities;
 
+import com.blooddonationmanager.application.enums.TipoSanguineoEnum;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import jakarta.persistence.Column;
@@ -37,6 +38,6 @@ public class DoadorSangue {
 
     @Column(name = "tipo_sanguineo")
     @Enumerated(EnumType.STRING)
-    private String tipoSanguineo;
+    private TipoSanguineoEnum tipoSanguineo;
     
 }

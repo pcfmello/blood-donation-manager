@@ -3,6 +3,7 @@ package com.blooddonationmanager.application.entities;
 import java.io.Serializable;
 import java.time.LocalDate;
 
+import com.blooddonationmanager.application.enums.SexoEnum;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import jakarta.persistence.Column;
@@ -43,7 +44,7 @@ public class Pessoa implements Serializable {
 
     @Column
     @Enumerated(EnumType.STRING)
-    private String sexo;
+    private SexoEnum sexo;
 
     @Column(name = "nome_mae")
     private String nomeMae;
