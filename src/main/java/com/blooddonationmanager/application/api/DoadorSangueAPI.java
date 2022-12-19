@@ -1,4 +1,4 @@
-package com.blooddonationmanager.application.resources;
+package com.blooddonationmanager.application.api;
 
 import java.util.List;
 
@@ -18,7 +18,7 @@ import lombok.AllArgsConstructor;
 @RestController
 @AllArgsConstructor
 @RequestMapping(path = "cadastrar")
-public class DoadorSangueResource {
+public class DoadorSangueAPI {
 
     private final DoadorSangueService doadorSangueService;
     
