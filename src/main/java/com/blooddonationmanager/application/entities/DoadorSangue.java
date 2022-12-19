@@ -1,12 +1,10 @@
 package com.blooddonationmanager.application.entities;
 
-import com.blooddonationmanager.application.enums.TipoSanguineoEnum;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -30,12 +28,11 @@ public class DoadorSangue {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY, cascade=CascadeType.PERSIST)
     @JoinColumn(name = "pessoaId")
     private Pessoa pessoa;    
 
     @Column(name = "tipo_sanguineo")
-    @Enumerated(EnumType.STRING)
-    private TipoSanguineoEnum tipoSanguineo;
+    private String tipoSanguineo;
     
 }

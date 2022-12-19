@@ -6,6 +6,7 @@ import java.time.LocalDate;
 import com.blooddonationmanager.application.enums.SexoEnum;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -61,11 +62,11 @@ public class Pessoa implements Serializable {
     @Column(name = "peso")
     private Short peso;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY, cascade=CascadeType.PERSIST)
     @JoinColumn(name = "enderecoId")
     private Endereco endereco;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY, cascade=CascadeType.PERSIST)
     @JoinColumn(name = "contatoId")
     private Contato contato;
 
